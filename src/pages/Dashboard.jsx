@@ -65,15 +65,14 @@ export default function Dashboard() {
       accentBorder: "rgba(124,92,252,0.2)",
     },
     {
-      label: "Bubble",
-      emoji: "🌐",
-      desc: "Peer challenges",
-      path: null,
-      accent: "var(--z-green)",
-      accentBg: "rgba(0,245,160,0.08)",
-      accentBorder: "rgba(0,245,160,0.2)",
-      soon: true,
-    },
+  label: "Bubble",
+  emoji: "🌐",
+  desc: "Peer challenges",
+  path: "/bubble",
+  accent: "var(--z-green)",
+  accentBg: "rgba(0,245,160,0.08)",
+  accentBorder: "rgba(0,245,160,0.2)",
+}
   ];
 
   return (

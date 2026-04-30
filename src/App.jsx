@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import FinQuest from "./pages/FinQuest";
 import FinCircle from "./pages/FinCircle";
+import Bubble from "./pages/Bubble";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Route path="/" element={<Dashboard />} />
       <Route path="/finquest" element={<FinQuest />} />
       <Route path="/fincircle" element={<FinCircle />} />
+      <Route path="/bubble" element={<Bubble />} />
     </Routes>
   );
 }

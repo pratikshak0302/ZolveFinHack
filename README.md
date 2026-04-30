@@ -38,6 +38,11 @@ Learn (FinQuest) → Engage (FinCircle) → Earn ZXP → Level Up → Repeat
 - Expandable answer threads
 - Community feed with avatar system
 
+### 🫧 Bubble — Interactive Financial Insights
+- Visual bubble network showing financial connections
+- Real-time data visualization
+- Explore financial relationships and patterns
+
 ### ⚡ ZXP System (Global Gamification Engine)
 - Unified XP state across all pages via Zustand
 - Automatic level calculation
@@ -67,9 +72,13 @@ src/
 ├── index.css                # Global design system + Tailwind
 │
 ├── pages/
-    ├── Dashboard.jsx        # Main hub + XP display
-   ├── FinQuest.jsx         # Learning modules + quiz system
-   └── FinCircle.jsx        # Community Q&A feed
+│   ├── Dashboard.jsx        # Main hub + XP display
+│   ├── FinQuest.jsx         # Learning modules + quiz system
+│   ├── FinCircle.jsx        # Community Q&A feed
+│   └── Bubble.jsx           # Interactive financial insights
+│
+└── store/
+    └── UseUserStore.js      # Zustand state management (ZXP system)
 ```
 
 ---
