@@ -67,12 +67,9 @@ src/
 ├── index.css                # Global design system + Tailwind
 │
 ├── pages/
-│   ├── Dashboard.jsx        # Main hub + XP display
-│   ├── FinQuest.jsx         # Learning modules + quiz system
-│   └── FinCircle.jsx        # Community Q&A feed
-│
-└── store/
-    └── useUserStore.js      # Global ZXP state (Zustand)
+    ├── Dashboard.jsx        # Main hub + XP display
+   ├── FinQuest.jsx         # Learning modules + quiz system
+   └── FinCircle.jsx        # Community Q&A feed
 ```
 
 ---
@@ -126,35 +123,11 @@ To deploy:
 2. Import repo on [vercel.com](https://vercel.com)
 3. Vercel auto-detects Vite — click Deploy
 
----
-
-## 🗺 Roadmap
-
-- [x] Multi-page React app with routing
-- [x] FinQuest learning + quiz system
-- [x] FinCircle community Q&A
-- [x] Global ZXP gamification engine
-- [x] Premium fintech UI
-- [x] Vercel deployment
-- [ ] Bubble — peer challenge system (coming soon)
-- [ ] AI-powered answers in FinCircle
-- [ ] Firebase backend + real authentication
-- [ ] Persistent XP storage
-- [ ] Full ScoreMap credit journey
-
----
 
 ## 👥 Team
 
 Built for the **Zolve Hackathon** 🏆
 
----
-
-## 📄 License
-
-MIT License — feel free to use and build on this project.
-
----
 
 <p align="center">
   Built with ❤️ for international students navigating finance in a new country
