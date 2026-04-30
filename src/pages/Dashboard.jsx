@@ -15,34 +15,33 @@ export default function Dashboard() {
       emoji: "📘",
       desc: "Learn & earn XP",
       path: "/finquest",
-      accent: "var(--z-cyan)",
-      accentBg: "rgba(0,212,255,0.08)",
-      accentBorder: "rgba(0,212,255,0.2)",
+      accent: "var(--z-primary)",
+      accentBg: "rgba(244,81,30,0.08)",
+      accentBorder: "rgba(244,81,30,0.2)",
     },
     {
       label: "FinCircle",
       emoji: "💬",
       desc: "Ask the community",
       path: "/fincircle",
-      accent: "var(--z-purple)",
-      accentBg: "rgba(124,92,252,0.08)",
-      accentBorder: "rgba(124,92,252,0.2)",
+      accent: "var(--z-primary)",
+      accentBg: "rgba(244,81,30,0.08)",
+      accentBorder: "rgba(244,81,30,0.2)",
     },
     {
       label: "Bubble",
       emoji: "🌐",
       desc: "Peer challenges",
       path: null,
-      accent: "var(--z-green)",
-      accentBg: "rgba(0,245,160,0.08)",
-      accentBorder: "rgba(0,245,160,0.2)",
+      accent: "var(--z-primary)",
+      accentBg: "rgba(244,81,30,0.08)",
+      accentBorder: "rgba(244,81,30,0.2)",
       soon: true,
     },
   ];
 
   return (
     <div
-      className="noise-bg"
       style={{
         minHeight: "100vh",
         background: "var(--z-bg)",
@@ -52,17 +51,17 @@ export default function Dashboard() {
         position: "relative",
       }}
     >
-      {/* Background glow blobs */}
+      {/* Background glow blobs - Orange theme */}
       <div style={{
         position: "fixed", top: -80, right: -80,
         width: 300, height: 300,
-        background: "radial-gradient(circle, rgba(0,245,160,0.06) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(244,81,30,0.06) 0%, transparent 70%)",
         pointerEvents: "none", zIndex: 0,
       }} />
       <div style={{
         position: "fixed", bottom: -60, left: -60,
         width: 250, height: 250,
-        background: "radial-gradient(circle, rgba(0,212,255,0.05) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(244,81,30,0.05) 0%, transparent 70%)",
         pointerEvents: "none", zIndex: 0,
       }} />
 
@@ -75,18 +74,18 @@ export default function Dashboard() {
               WELCOME BACK
             </p>
             <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: 26, fontWeight: 800, color: "var(--z-text)" }}>
-              Zolve <span className="gradient-text-green">Dashboard</span>
+              Zolve <span className="gradient-text-primary">Dashboard</span>
             </h1>
           </div>
 
           <div style={{
-            background: "linear-gradient(135deg, rgba(0,245,160,0.12), rgba(0,212,255,0.12))",
-            border: "1px solid rgba(0,245,160,0.25)",
+            background: "rgba(244,81,30,0.1)",
+            border: "1px solid rgba(244,81,30,0.25)",
             borderRadius: 12,
             padding: "8px 14px",
             textAlign: "center",
           }}>
-            <p style={{ fontFamily: "Syne, sans-serif", fontSize: 18, fontWeight: 800, color: "var(--z-green)", lineHeight: 1 }}>
+            <p style={{ fontFamily: "Syne, sans-serif", fontSize: 18, fontWeight: 800, color: "var(--z-primary)", lineHeight: 1 }}>
               {level}
             </p>
             <p style={{ fontSize: 10, color: "var(--z-muted)", fontFamily: "Syne, sans-serif", letterSpacing: "0.08em", marginTop: 2 }}>
@@ -106,7 +105,7 @@ export default function Dashboard() {
                 ZXP BALANCE
               </p>
               <p style={{ fontFamily: "Syne, sans-serif", fontSize: 36, fontWeight: 800, lineHeight: 1 }}>
-                <span className="gradient-text-green">{xp}</span>
+                <span className="gradient-text-primary">{xp}</span>
                 <span style={{ fontSize: 14, color: "var(--z-muted)", fontWeight: 400, marginLeft: 6 }}>/ {nextLevelXP}</span>
               </p>
             </div>
@@ -132,19 +131,19 @@ export default function Dashboard() {
               <p style={{ fontSize: 11, color: "var(--z-muted)", fontFamily: "Syne, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>
                 SCOREMAP JOURNEY
               </p>
-              <p style={{ fontFamily: "Syne, sans-serif", fontSize: 13, color: "var(--z-text)" }}>
+              <p style={{ fontFamily: "Syne, sans-serif", fontSize: 13, color: "var(--z-text-body)" }}>
                 Credit score progress
               </p>
             </div>
             <div style={{
-              background: "rgba(124,92,252,0.12)",
-              border: "1px solid rgba(124,92,252,0.25)",
+              background: "rgba(244,81,30,0.12)",
+              border: "1px solid rgba(244,81,30,0.25)",
               borderRadius: 8,
               padding: "6px 10px",
               fontFamily: "Syne, sans-serif",
               fontSize: 13,
               fontWeight: 700,
-              color: "var(--z-purple)",
+              color: "var(--z-primary)",
             }}>
               {Math.round((xp / 750) * 750 * 0.8 + 300)}
             </div>
@@ -157,7 +156,7 @@ export default function Dashboard() {
                 style={{
                   width: `${scoreMapProgress}%`,
                   height: 8,
-                  background: "linear-gradient(90deg, var(--z-purple), var(--z-cyan))",
+                  background: "linear-gradient(90deg, var(--z-primary), var(--z-primary-light))",
                   borderRadius: 100,
                   transition: "width 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
                 }}

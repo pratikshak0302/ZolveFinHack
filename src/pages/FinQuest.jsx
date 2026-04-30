@@ -9,9 +9,9 @@ const modules = [
     xp: 50,
     emoji: "🏦",
     tag: "FOUNDATION",
-    tagColor: "var(--z-cyan)",
-    tagBg: "rgba(0,212,255,0.08)",
-    tagBorder: "rgba(0,212,255,0.2)",
+    tagColor: "var(--z-primary)",
+    tagBg: "rgba(244,81,30,0.08)",
+    tagBorder: "rgba(244,81,30,0.2)",
     content:
       "A credit score is a 3-digit number (300–850) that lenders use to evaluate how likely you are to repay debt. It's built from your payment history, credit utilization, length of credit history, credit mix, and new inquiries. For international students, building credit early is crucial — it affects apartments, loans, and even some jobs.",
     quiz: {
@@ -26,9 +26,9 @@ const modules = [
     xp: 60,
     emoji: "📊",
     tag: "ESSENTIALS",
-    tagColor: "var(--z-green)",
-    tagBg: "rgba(0,245,160,0.08)",
-    tagBorder: "rgba(0,245,160,0.2)",
+    tagColor: "var(--z-primary)",
+    tagBg: "rgba(244,81,30,0.08)",
+    tagBorder: "rgba(244,81,30,0.2)",
     content:
       "A budget is a plan that tells your money where to go. The 50/30/20 rule is a great start: 50% on needs (rent, food), 30% on wants (entertainment), 20% on savings and debt. Tracking expenses with apps or spreadsheets reveals spending leaks and helps you reach goals faster.",
     quiz: {
@@ -43,9 +43,9 @@ const modules = [
     xp: 70,
     emoji: "💡",
     tag: "GROWTH",
-    tagColor: "var(--z-purple)",
-    tagBg: "rgba(124,92,252,0.08)",
-    tagBorder: "rgba(124,92,252,0.2)",
+    tagColor: "var(--z-primary)",
+    tagBg: "rgba(244,81,30,0.08)",
+    tagBorder: "rgba(244,81,30,0.2)",
     content:
       "Pay yourself first: set aside savings before spending. Even $25/week becomes $1,300/year. Use high-yield savings accounts to beat inflation. Automate transfers so saving is effortless. Track your net worth monthly to stay motivated and spot progress.",
     quiz: {
@@ -101,11 +101,11 @@ export default function FinQuest() {
         margin: "0 auto",
       }}
     >
-      {/* Background glow */}
+      {/* Background glow - Orange theme */}
       <div style={{
         position: "fixed", top: -60, left: -60,
         width: 280, height: 280,
-        background: "radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(244,81,30,0.06) 0%, transparent 70%)",
         pointerEvents: "none", zIndex: 0,
       }} />
 
@@ -116,7 +116,7 @@ export default function FinQuest() {
           <button
             onClick={() => step === "list" ? navigate("/") : backToList()}
             style={{
-              background: "rgba(255,255,255,0.04)",
+              background: "#FFFFFF",
               border: "1px solid var(--z-border)",
               borderRadius: 10,
               width: 38, height: 38,
@@ -132,8 +132,8 @@ export default function FinQuest() {
             <p style={{ fontSize: 11, color: "var(--z-muted)", fontFamily: "Syne, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase" }}>
               LEARNING
             </p>
-            <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800 }}>
-              Fin<span className="gradient-text-green">Quest</span>
+            <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800, color: "var(--z-text)" }}>
+              Fin<span className="gradient-text-primary">Quest</span>
             </h1>
           </div>
           <div style={{ marginLeft: "auto" }}>
@@ -159,7 +159,7 @@ export default function FinQuest() {
                       padding: "20px",
                       animationDelay: `${i * 0.06}s`,
                       opacity: 0,
-                      border: done ? "1px solid rgba(0,245,160,0.3)" : undefined,
+                      border: done ? "1px solid rgba(244,81,30,0.3)" : undefined,
                     }}
                   >
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
@@ -176,7 +176,7 @@ export default function FinQuest() {
 
                       <div style={{ flex: 1 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-                          <h2 style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 15 }}>
+                          <h2 style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 15, color: "var(--z-text)" }}>
                             {m.title}
                           </h2>
                           <span style={{
@@ -230,27 +230,27 @@ export default function FinQuest() {
                   }}>
                     {selectedModule.tag}
                   </span>
-                  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: 20, fontWeight: 800 }}>
+                  <h2 style={{ fontFamily: "Syne, sans-serif", fontSize: 20, fontWeight: 800, color: "var(--z-text)" }}>
                     {selectedModule.title}
                   </h2>
                 </div>
               </div>
 
               <div style={{
-                background: "rgba(255,255,255,0.03)",
+                background: "var(--z-surface)",
                 border: "1px solid var(--z-border)",
                 borderRadius: 12,
                 padding: "18px",
                 marginBottom: 24,
               }}>
-                <p style={{ fontSize: 14, lineHeight: 1.75, color: "rgba(232,237,245,0.85)" }}>
+                <p style={{ fontSize: 14, lineHeight: 1.75, color: "var(--z-text-body)" }}>
                   📖 {selectedModule.content}
                 </p>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <p style={{ fontSize: 12, color: "var(--z-muted)" }}>
-                  Complete quiz to earn <span style={{ color: "var(--z-green)", fontWeight: 700 }}>+{selectedModule.xp} ZXP</span>
+                  Complete quiz to earn <span style={{ color: "var(--z-primary)", fontWeight: 700 }}>+{selectedModule.xp} ZXP</span>
                 </p>
                 <button
                   className="z-btn-primary"
@@ -271,7 +271,7 @@ export default function FinQuest() {
               <p style={{ fontSize: 11, color: "var(--z-muted)", fontFamily: "Syne, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10 }}>
                 QUIZ
               </p>
-              <h3 style={{ fontFamily: "Syne, sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 22, lineHeight: 1.4 }}>
+              <h3 style={{ fontFamily: "Syne, sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 22, lineHeight: 1.4, color: "var(--z-text)" }}>
                 {selectedModule.quiz.q}
               </h3>
 
@@ -289,20 +289,20 @@ export default function FinQuest() {
                         padding: "13px 16px",
                         borderRadius: 10,
                         border: isCorrect
-                          ? "1px solid rgba(0,245,160,0.5)"
+                          ? "1px solid rgba(244,81,30,0.5)"
                           : isWrong
                           ? "1px solid rgba(255,80,80,0.5)"
                           : isSelected
-                          ? "1px solid rgba(0,212,255,0.5)"
+                          ? "1px solid rgba(244,81,30,0.5)"
                           : "1px solid var(--z-border)",
                         background: isCorrect
-                          ? "rgba(0,245,160,0.1)"
+                          ? "rgba(244,81,30,0.1)"
                           : isWrong
                           ? "rgba(255,80,80,0.1)"
                           : isSelected
-                          ? "rgba(0,212,255,0.08)"
-                          : "rgba(255,255,255,0.02)",
-                        color: isCorrect ? "var(--z-green)" : isWrong ? "#ff5050" : "var(--z-text)",
+                          ? "rgba(244,81,30,0.08)"
+                          : "#FFFFFF",
+                        color: isCorrect ? "var(--z-primary)" : isWrong ? "#ff5050" : "var(--z-text)",
                         fontFamily: "DM Sans, sans-serif",
                         fontSize: 14,
                         cursor: quizResult ? "default" : "pointer",
@@ -320,11 +320,11 @@ export default function FinQuest() {
               {/* Result messages */}
               {quizResult === "correct" && (
                 <div style={{
-                  background: "rgba(0,245,160,0.08)",
-                  border: "1px solid rgba(0,245,160,0.25)",
+                  background: "rgba(244,81,30,0.08)",
+                  border: "1px solid rgba(244,81,30,0.25)",
                   borderRadius: 10, padding: "12px 16px", marginBottom: 16,
                 }}>
-                  <p style={{ color: "var(--z-green)", fontFamily: "Syne, sans-serif", fontWeight: 700 }}>
+                  <p style={{ color: "var(--z-primary)", fontFamily: "Syne, sans-serif", fontWeight: 700 }}>
                     🎉 Correct! +{selectedModule.xp} ZXP earned
                   </p>
                 </div>

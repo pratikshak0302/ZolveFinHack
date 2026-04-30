@@ -7,9 +7,9 @@ const initialQuestions = [
     id: 1,
     user: "Alex",
     avatar: "A",
-    avatarColor: "rgba(0,212,255,0.2)",
-    avatarBorder: "rgba(0,212,255,0.4)",
-    avatarText: "var(--z-cyan)",
+    avatarColor: "rgba(244,81,30,0.15)",
+    avatarBorder: "rgba(244,81,30,0.3)",
+    avatarText: "var(--z-primary)",
     question: "How do I build credit score from zero as an international student?",
     answers: [
       { user: "Priya", text: "Start with a secured credit card and pay on time every month." },
@@ -21,9 +21,9 @@ const initialQuestions = [
     id: 2,
     user: "Maya",
     avatar: "M",
-    avatarColor: "rgba(124,92,252,0.2)",
-    avatarBorder: "rgba(124,92,252,0.4)",
-    avatarText: "var(--z-purple)",
+    avatarColor: "rgba(244,81,30,0.15)",
+    avatarBorder: "rgba(244,81,30,0.3)",
+    avatarText: "var(--z-primary)",
     question: "What happens if I miss a credit card payment?",
     answers: [
       { user: "Community", text: "Your credit score drops and interest increases. Set up autopay to avoid this." },
@@ -66,9 +66,9 @@ export default function FinCircle() {
       id: Date.now(),
       user: "You",
       avatar: "Y",
-      avatarColor: "rgba(0,245,160,0.15)",
-      avatarBorder: "rgba(0,245,160,0.35)",
-      avatarText: "var(--z-green)",
+      avatarColor: "rgba(244,81,30,0.15)",
+      avatarBorder: "rgba(244,81,30,0.35)",
+      avatarText: "var(--z-primary)",
       question: newQ.trim(),
       answers: [],
       time: "Just now",
@@ -107,11 +107,11 @@ export default function FinCircle() {
         margin: "0 auto",
       }}
     >
-      {/* Background glow */}
+      {/* Background glow - Orange theme */}
       <div style={{
         position: "fixed", top: -60, right: -60,
         width: 280, height: 280,
-        background: "radial-gradient(circle, rgba(124,92,252,0.07) 0%, transparent 70%)",
+        background: "radial-gradient(circle, rgba(244,81,30,0.07) 0%, transparent 70%)",
         pointerEvents: "none", zIndex: 0,
       }} />
 
@@ -122,7 +122,7 @@ export default function FinCircle() {
           <button
             onClick={() => navigate("/")}
             style={{
-              background: "rgba(255,255,255,0.04)",
+              background: "#FFFFFF",
               border: "1px solid var(--z-border)",
               borderRadius: 10,
               width: 38, height: 38,
@@ -138,8 +138,8 @@ export default function FinCircle() {
             <p style={{ fontSize: 11, color: "var(--z-muted)", fontFamily: "Syne, sans-serif", letterSpacing: "0.1em", textTransform: "uppercase" }}>
               COMMUNITY
             </p>
-            <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800 }}>
-              Fin<span className="gradient-text-purple">Circle</span>
+            <h1 style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800, color: "var(--z-text)" }}>
+              Fin<span className="gradient-text-primary">Circle</span>
             </h1>
           </div>
           <div style={{ marginLeft: "auto" }}>
@@ -154,8 +154,8 @@ export default function FinCircle() {
           marginBottom: 20,
         }}>
           {[
-            { label: "Ask question", xp: "+10 ZXP", color: "var(--z-cyan)", bg: "rgba(0,212,255,0.06)", border: "rgba(0,212,255,0.15)" },
-            { label: "Add answer", xp: "+20 ZXP", color: "var(--z-green)", bg: "rgba(0,245,160,0.06)", border: "rgba(0,245,160,0.15)" },
+            { label: "Ask question", xp: "+10 ZXP", color: "var(--z-primary)", bg: "rgba(244,81,30,0.06)", border: "rgba(244,81,30,0.15)" },
+            { label: "Add answer", xp: "+20 ZXP", color: "var(--z-primary)", bg: "rgba(244,81,30,0.06)", border: "rgba(244,81,30,0.15)" },
           ].map((item) => (
             <div key={item.label} style={{
               flex: 1,
@@ -222,7 +222,7 @@ export default function FinCircle() {
                     </p>
                     <p style={{ fontSize: 11, color: "var(--z-muted)" }}>{q.time}</p>
                   </div>
-                  <p style={{ fontSize: 14, color: "rgba(232,237,245,0.85)", lineHeight: 1.5 }}>
+                  <p style={{ fontSize: 14, color: "var(--z-text-body)", lineHeight: 1.5 }}>
                     {q.question}
                   </p>
                 </div>
@@ -250,15 +250,15 @@ export default function FinCircle() {
                       >
                         <div style={{
                           width: 6, height: 6,
-                          background: "var(--z-green)",
+                          background: "var(--z-primary)",
                           borderRadius: "50%",
                           marginTop: 7, flexShrink: 0,
                         }} />
                         <div>
-                          <p style={{ fontSize: 11, color: "var(--z-green)", fontFamily: "Syne, sans-serif", fontWeight: 700, marginBottom: 2 }}>
+                          <p style={{ fontSize: 11, color: "var(--z-primary)", fontFamily: "Syne, sans-serif", fontWeight: 700, marginBottom: 2 }}>
                             {a.user}
                           </p>
-                          <p style={{ fontSize: 13, color: "rgba(232,237,245,0.75)", lineHeight: 1.5 }}>
+                          <p style={{ fontSize: 13, color: "var(--z-text-body)", lineHeight: 1.5 }}>
                             {a.text}
                           </p>
                         </div>
@@ -270,7 +270,7 @@ export default function FinCircle() {
                         onClick={() => setExpandedId(expandedId === q.id ? null : q.id)}
                         style={{
                           background: "none", border: "none",
-                          color: "var(--z-cyan)", fontSize: 12,
+                          color: "var(--z-primary)", fontSize: 12,
                           fontFamily: "Syne, sans-serif", fontWeight: 700,
                           cursor: "pointer", marginTop: 8, padding: 0,
                         }}
