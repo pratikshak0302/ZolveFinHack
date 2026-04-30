@@ -2,14 +2,6 @@
 
 > A gamified financial learning and community platform built for international students.
 
-![Zolve Banner](https://img.shields.io/badge/Zolve-Hackathon%20Project-F4511E?style=for-the-badge&logo=react)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
-![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?style=flat-square&logo=tailwindcss)
-![Zustand](https://img.shields.io/badge/Zustand-State%20Management-FF6B3D?style=flat-square)
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=flat-square&logo=vercel)
-
----
 
 ## 💡 What is this?
 
