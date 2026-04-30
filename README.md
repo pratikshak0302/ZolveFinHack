@@ -123,6 +123,13 @@ To deploy:
 2. Import repo on [vercel.com](https://vercel.com)
 3. Vercel auto-detects Vite — click Deploy
 
+## 🎥 Demo Video
+
+<p align="center">
+  <a href="https://cometmail-my.sharepoint.com/:v:/g/personal/fxt230006_utdallas_edu/IQDZb-cO-EFwTpghLHaa4f5bAcPOODVApoyF5pgm7OtL-og" target="_blank">
+    👉 <b>Click here to watch Zolve Demo</b>
+  </a>
+</p>
 
 ## 👥 Team
 
